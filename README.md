@@ -36,6 +36,38 @@ ramdb is a lightweight, in-memory database built using Python's memory-mapped fi
 ### Setup Steps
 
 1. **Clone the Repository:**
+## 🚀 Benchmark & Feature Comparison
+
+Below is a comparison of **RAMDB** against other popular in-memory databases: **Redis, Memcached, and SQLite (in-memory mode).**
+
+| Feature / Metric         | **RAMDB** | **Redis** | **Memcached** | **SQLite (In-Memory)** |
+|-------------------------|---------------------|-------|-----------|---------------------|
+| **Data Storage Type**    | RAM + Hybrid SSD    | RAM   | RAM       | RAM (temporary)    |
+| **Persistence**         | ✅ (Hybrid RAM-SSD) | ✅ (Snapshots & AOF) | ❌ (RAM only) | ✅ (Disk-backed) |
+| **Data Structure Support** | Key-Value          | Key-Value, Hashes, Lists, Sets | Key-Value (Simple) | Tables (SQL) |
+| **Multi-threading**      | 🔄 (WIP - planned)  | ❌ (Single-threaded) | ✅ (Multi-threaded) | ✅ (Multi-threaded) |
+| **Concurrency Support**  | 🔄 (Planned with Locks) | ✅ (Event-driven) | ✅ (Thread-safe) | ✅ (Locking) |
+| **Query Language**       | Simple API (Planned CLI) | Redis CLI & APIs | Simple API | SQL |
+| **Read Speed**          | ⚡ ~X ops/sec (Benchmark Needed) | ⚡ ~100k+ ops/sec | ⚡ ~500k ops/sec | ⚡ ~50k ops/sec |
+| **Write Speed**         | ⚡ ~X ops/sec (Benchmark Needed) | ⚡ ~80k+ ops/sec | ⚡ ~200k ops/sec | ⚡ ~40k ops/sec |
+| **Use Case**            | Fast, hybrid storage DB | Caching & NoSQL DB | Caching Layer | In-memory SQL |
+| **License**             | MIT (Open Source)   | BSD   | BSD       | Public Domain |
+
+---
+
+### 📌 Next Steps
+
+✅ **Run Benchmarks** for RAMDB:
+- Measure **read/write speed** (ops/sec).
+- Compare **RAMDB vs. Redis, Memcached, SQLite**.
+- Use `timeit` in Python or benchmarking tools.
+
+✅ **Update this table** with real performance data.
+
+✅ **Engage with the open-source community** to improve RAMDB’s performance.
+
+📢 **Want to contribute?** Check out our [GitHub Issues](#) and [Discussions](#). 🚀
+
 
    ```bash
    git clone https://github.com/Aviat-at/ramdb.git
